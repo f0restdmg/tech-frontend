@@ -1,4 +1,4 @@
-name: Build and Deploy Directly on VPS
+name: Deploy to VPS
 
 on:
   push:
@@ -20,18 +20,12 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd ../apps/frontend
-            export HOME=/root
-            export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -v" git pull origin main
-
-            # Возвращаемся на уровень выше для доступа к `docker-compose.yml`
-            cd ..
-
-            # Собираем образ, но не запускаем его сразу
-            docker-compose build nextjs
-
-            # Запускаем новый контейнер frontend только после успешной сборки
-            docker-compose up -d --no-deps nextjs
-
-            # Очищаем неиспользуемые образы, чтобы освободить место
-            docker system prune -f
+            echo "Starting SSH connection..."
+            ssh -v -i ~/.ssh/id_rsa ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} "
+              cd /apps/frontend
+              git pull origin main
+              cd ..
+              docker-compose build nextjs
+              docker-compose up -d --no-deps nextjs
+              docker system prune -f
+            "
