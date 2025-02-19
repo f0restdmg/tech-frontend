@@ -1,0 +1,29 @@
+# Dependencies
+/node_modules
+.nvmrc
+package-lock.json
+
+# Next.js build output
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# Public files
+/public
+
+# Docker
+Dockerfile
+.dockerignore
+/docker-compose.*
+.env*
+
+# Version control & project settings
+/.git
+.gitignore
+.docker-build.yml
+.idea
+
+# Docs files
+*.md
+*.adoc
