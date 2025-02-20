@@ -1,24 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import {
   ColorSchemeScript,
   MantineProvider,
   mantineHtmlProps,
 } from "@mantine/core";
+import { inter } from "@/shared/fonts";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import "@mantine/core/styles.css";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "./styles/index.css";
 
 export const metadata: Metadata = {
   title: "TECH-FRONTEND",
@@ -35,7 +25,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={inter.className}>
         <MantineProvider>
           <Header />
           <main>{children}</main>
