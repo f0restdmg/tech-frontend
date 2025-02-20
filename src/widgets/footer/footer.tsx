@@ -26,7 +26,7 @@ export const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <Container className={styles.inner}>
+      <Container size={"lg"} className={styles.inner}>
         <MantineLogo size={28} />
         <Group className={styles.links}>{items}</Group>
       </Container>

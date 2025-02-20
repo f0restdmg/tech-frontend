@@ -34,7 +34,7 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Container size="md" className={styles.inner}>
+      <Container size="lg" className={styles.inner}>
         <MantineLogo size={28} />
         <Group gap={5} visibleFrom="xs">
           {items}

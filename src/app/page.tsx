@@ -1,6 +1,8 @@
+import { Container } from "@mantine/core";
+
 export default function Home() {
   return (
-    <div>
+    <Container size="lg">
       <ul>
         <li>
           h1 - Блок выбора сравнений видеокарт, процессоров как у -
@@ -16,6 +18,6 @@ export default function Home() {
         <li>Топ 10 видеокарт по просмотрам</li>
         <li>Топ 10 стравнений по популярности</li>
       </ul>
-    </div>
+    </Container>
   );
 }
