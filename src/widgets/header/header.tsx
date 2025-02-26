@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Burger, Container, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
@@ -13,7 +14,10 @@ const links = [
   { link: "/community", label: "Community" },
 ];
 
-export const Header = () => {
+export async function Header({ locale }: { locale: string }) {
+  const messages = (await import(`./assets/${locale}.json`)).default;
+  const t = useTranslations("header");
+
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
 
@@ -39,9 +43,9 @@ export const Header = () => {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
+        {t.raw("title", messages)}
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>
   );
-};
+}
