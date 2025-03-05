@@ -1,8 +1,14 @@
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@mantine/core";
 
 export default function Home() {
+  const t = useTranslations("Home");
+
   return (
     <Container size="lg">
+      <h1>{t("title")}</h1>
+      <Link href="/about">{t("about")}</Link>
       <ul>
         <li>
           h1 - Блок выбора сравнений видеокарт, процессоров как у -
