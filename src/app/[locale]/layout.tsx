@@ -3,15 +3,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
-import {
-  ColorSchemeScript,
-  MantineProvider,
-  mantineHtmlProps,
-} from "@mantine/core";
 import { inter } from "@/shared/fonts";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
-import "@mantine/core/styles.css";
 import "../styles/index.css";
 
 export const metadata: Metadata = {
@@ -34,17 +28,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} {...mantineHtmlProps}>
-      <head>
-        <ColorSchemeScript />
-      </head>
+    <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <MantineProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </MantineProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

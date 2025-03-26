@@ -12,10 +12,7 @@
     "lint:fix": "next lint --fix ."
   },
   "dependencies": {
-    "@mantine/core": "^7.17.0",
-    "@mantine/hooks": "^7.17.0",
-    "@mantinex/mantine-logo": "^1.1.0",
-    "next": "15.1.5",
+    "next": "15.2.4",
     "next-intl": "^3.26.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

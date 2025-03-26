@@ -1,12 +1,11 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Container } from "@mantine/core";
 
 export default function Home() {
   const t = useTranslations("Home");
 
   return (
-    <Container size="lg">
+    <div>
       <h1>{t("title")}</h1>
       <Link href="/about">{t("about")}</Link>
       <ul>
@@ -24,6 +23,6 @@ export default function Home() {
         <li>Топ 10 видеокарт по просмотрам</li>
         <li>Топ 10 стравнений по популярности</li>
       </ul>
-    </Container>
+    </div>
   );
 }
