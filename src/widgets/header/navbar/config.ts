@@ -1,7 +1,7 @@
 import { routerConfig } from "@/shared/lib/routerConfig";
 
 export const mainMenu = [
-    { title: "Блог", link: routerConfig.BLOG },
-    { title: "Рефни", link: routerConfig.REFNI },
-    { title: "О нас", link: routerConfig.ABOUT }
+  { title: "Блог", link: routerConfig.HOME },
+  { title: "Рефни", link: routerConfig.HOME },
+  { title: "О нас", link: routerConfig.HOME },
 ];
