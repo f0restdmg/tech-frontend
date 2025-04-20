@@ -1,0 +1,29 @@
+.navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar__list li + li {
+    margin-left: 22px;
+}
+
+.navbar__link {
+    color: var(--primary);
+}
+
+.navbar__link:hover {
+    color: var(--purple);
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
+}
