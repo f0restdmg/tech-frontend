@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import { Header } from "@/widgets/header";
+import { Footer } from "@/widgets/footer";
 import { inter } from "@/shared/fonts";
 import "../styles/index.css";
 
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

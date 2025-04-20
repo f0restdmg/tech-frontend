@@ -24,8 +24,13 @@ main {
   flex: 1;
 }
 
+a:hover {
+  color: var(--blue);
+}
+
 .container {
   max-width: 1272px;
   padding: 0 16px;
   margin: 0 auto;
 }
+

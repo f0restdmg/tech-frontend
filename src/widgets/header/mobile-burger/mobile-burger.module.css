@@ -67,10 +67,6 @@
     line-height: var(--font-line);
 }
 
-.header__mobile-menu--link:hover {
-    color: var(--blue);
-}
-
 @media (max-width: 1024px) {
     .header__burger {
         display: flex;
