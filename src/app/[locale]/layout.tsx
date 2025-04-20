@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import { Header } from "@/widgets/header";
@@ -24,12 +23,10 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
-
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
         </NextIntlClientProvider>
