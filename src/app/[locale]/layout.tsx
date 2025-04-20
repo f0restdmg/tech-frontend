@@ -4,9 +4,6 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import { inter } from "@/shared/fonts";
-import { Header } from "@/widgets/header";
-import { Footer } from "@/widgets/footer";
-import "../styles/index.css";
 
 export const metadata: Metadata = {
   title: "TECH-FRONTEND",
@@ -29,11 +26,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <main>{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>
