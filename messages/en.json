@@ -1,5 +1,9 @@
 {
   "Home": {
     "title": "Home Page"
+  },
+  "Navbar": {
+    "cpus": "Processors",
+    "gpus": "Graphics cards"
   }
 }
