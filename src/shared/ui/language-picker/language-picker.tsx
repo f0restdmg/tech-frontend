@@ -1,8 +1,9 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import clsx from "clsx";
+import { useOutsideClick } from "@/shared/lib/hooks";
 import { languages } from "./config";
 import { LanguagePickerProps } from "./types";
 import styles from "./language-picker.module.css";
@@ -13,6 +14,7 @@ export const LanguagePicker = ({ className }: LanguagePickerProps) => {
   const currentLang = pathname?.split("/")[1] || "en";
 
   const [opened, setOpened] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const handleSelect = (code: string) => {
     const segments = pathname?.split("/") || [];
@@ -21,10 +23,12 @@ export const LanguagePicker = ({ className }: LanguagePickerProps) => {
     setOpened(false);
   };
 
+  useOutsideClick(wrapperRef, () => setOpened(false));
+
   const current = languages.find((l) => l.code === currentLang) || languages[0];
 
   return (
-    <div className={clsx(styles.language, className)}>
+    <div className={clsx(styles.language, className)} ref={wrapperRef}>
       <button
         className={styles.language__picker}
         onClick={() => setOpened((prev) => !prev)}
