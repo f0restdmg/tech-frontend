@@ -14,6 +14,7 @@ export const Footer = () => {
         <div className={styles.footer__inner}>
           <Logo width={120} height={28.8} />
           <Menu />
+          <div />
         </div>
         <div className={styles.footer__links}>
           <span>

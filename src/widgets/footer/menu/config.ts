@@ -1,21 +1,21 @@
 import { routerConfig } from "@/shared/lib/routerConfig";
 
 interface MenuItem {
-  name: string;
-  slug: string;
+  key: string;
+  link: string;
 }
 
 export const footerMenu: MenuItem[] = [
   {
-    name: "Процессоры",
-    slug: routerConfig.HOME,
+    key: "cpus",
+    link: routerConfig.CPUS,
   },
   {
-    name: "Видеокарты",
-    slug: routerConfig.HOME,
+    key: "gpus",
+    link: routerConfig.GPUS,
   },
   {
-    name: "О сайте",
-    slug: routerConfig.HOME,
+    key: "about",
+    link: routerConfig.ABOUT,
   },
 ];

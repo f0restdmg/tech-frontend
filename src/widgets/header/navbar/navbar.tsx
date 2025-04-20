@@ -4,7 +4,7 @@ import { mainMenu } from "./config";
 import styles from "./navbar.module.css";
 
 export const Navbar = () => {
-  const t = useTranslations("Navbar");
+  const t = useTranslations("Menu");
   const locale = useLocale();
 
   return (

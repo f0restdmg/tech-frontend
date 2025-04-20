@@ -2,8 +2,9 @@
   "Home": {
     "title": "Home Page"
   },
-  "Navbar": {
+  "Menu": {
     "cpus": "Processors",
-    "gpus": "Graphics cards"
+    "gpus": "Graphics cards",
+    "about": "About"
   }
 }
