@@ -1,6 +1,7 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useRef, useState } from "react";
 import clsx from "clsx";
 import { useOutsideClick } from "@/shared/lib/hooks";
@@ -9,17 +10,15 @@ import { LanguagePickerProps } from "./types";
 import styles from "./language-picker.module.css";
 
 export const LanguagePicker = ({ className }: LanguagePickerProps) => {
-  const pathname = usePathname();
   const router = useRouter();
-  const currentLang = pathname?.split("/")[1] || "en";
+  const pathname = usePathname();
+  const currentLang = useLocale();
 
   const [opened, setOpened] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const handleSelect = (code: string) => {
-    const segments = pathname?.split("/") || [];
-    segments[1] = code;
-    router.push(segments.join("/"));
+  const handleSelect = (lang: string) => {
+    router.replace(pathname, { locale: lang });
     setOpened(false);
   };
 
