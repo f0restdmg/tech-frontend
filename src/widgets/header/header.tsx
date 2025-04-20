@@ -3,6 +3,7 @@ import { Logo } from "@/shared/ui/logo";
 import { MobileBurger } from "./mobile-burger";
 import { Navbar } from "./navbar";
 import styles from "./header.module.css";
+import { LanguagePicker } from "@/shared/ui/language-picker";
 
 export const Header = () => {
   return (
@@ -10,7 +11,7 @@ export const Header = () => {
       <div className={clsx(styles.header__inner, "container")}>
         <Logo className={styles.header__logo} />
         <Navbar />
-        <div className={styles.header__actions}></div>
+        <LanguagePicker />
         <MobileBurger />
       </div>
     </header>

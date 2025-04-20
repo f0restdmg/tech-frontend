@@ -19,6 +19,8 @@
   --white: #ECECEC;
 
   --bg-black: #161616;
+  --bg-light-black: #252525;
+  --bg-grey: #F1F1F1;
   --bg-white: #FEFEFC;
 
   /* Индексы */
@@ -30,7 +32,7 @@
   --cat-z-index: 5;
   --form-z-index: 7;
   --lazer-z-index: 10;
-  --header-z-index: 100;
+  --language-z-index: 100;
   --burger-z-index: 120;
   --logo-z-index: 150;
 
