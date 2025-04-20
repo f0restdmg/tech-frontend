@@ -1,0 +1,16 @@
+.socials {
+    display: flex;
+    gap: 8px;
+}
+
+.socials__item {
+    padding: 8px;
+}
+
+.socials__icon {
+    color: var(--purple);
+}
+
+.socials__icon:hover {
+    opacity: 0.7;
+}
