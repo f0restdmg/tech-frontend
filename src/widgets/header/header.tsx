@@ -11,7 +11,7 @@ export const Header = () => {
       <div className={clsx(styles.header__inner, "container")}>
         <Logo className={styles.header__logo} />
         <Navbar />
-        <LanguagePicker />
+        <LanguagePicker className={styles.header__actions} />
         <MobileBurger />
       </div>
     </header>
