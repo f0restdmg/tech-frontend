@@ -6,5 +6,8 @@
     "cpus": "Processors",
     "gpus": "Graphics cards",
     "about": "About"
+  },
+  "OtherLinks":{
+    "privacy": "Privacy Policy"
   }
 }

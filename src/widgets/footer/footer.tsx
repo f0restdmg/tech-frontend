@@ -4,10 +4,12 @@ import { CURRENT_YEAR } from "@/shared/config/date";
 import { routerConfig } from "@/shared/lib/routerConfig";
 import { Logo } from "@/shared/ui/logo";
 import { Menu } from "./menu";
-import { footerTexts } from "./constants";
 import styles from "./footer.module.css";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+  const t = useTranslations("OtherLinks");
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -21,7 +23,7 @@ export const Footer = () => {
             &copy; {commonTexts.PROJECT_NAME}, {CURRENT_YEAR}
           </span>
           <Link className={styles.footer__link} href={routerConfig.PRIVACY}>
-            {footerTexts.PRIVACY}
+            {t("privacy")}
           </Link>
         </div>
       </div>
