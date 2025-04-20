@@ -36,7 +36,7 @@ export const MobileBurger = () => {
                   href={item.link}
                   prefetch={false}
                 >
-                  {item.title}
+                  {item.key}
                 </Link>
               </li>
             ))}
