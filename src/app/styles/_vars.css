@@ -1,6 +1,6 @@
 :root {
   /* Шрифты */
-  --font-family-main: 'Mulish', sans-serif;
+  --font-family-main: 'Inter', sans-serif;
   --font-line-title: 120%;
   --font-line: 130%;
   --font-line-accent: 140%;
@@ -13,22 +13,14 @@
   --font-size-xl: 25px;
 
   /* Цвета */
-  --primary: #0F0F0F;
+  --primary: #161616;
   --light-primary: #252525;
   --grey: #616161;
-  --purple: #BD55D3;
-  --green: #C7FF3F;
-  --blue: #122BFC;
-  --white: #FFFFFF;
+  --blue: #3074F6;
+  --white: #ECECEC;
 
   --bg-black: #161616;
   --bg-white: #FEFEFC;
-  --bg-purple-light: rgb(227, 158, 237);
-  --bg-purple-white: #EED2F3;
-  --bg-purple-white-ligth: #F4EBF5;
-  --bg-grey: #F5F7F6;
-  --bg-grey-input: #F1F1F1;
-  --bg-grey-slider: #D9D9D9;
 
   /* Индексы */
   --underline-z-index: -1;

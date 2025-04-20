@@ -15,11 +15,11 @@
 }
 
 .navbar__link {
-    color: var(--primary);
+    color: var(--white);
 }
 
 .navbar__link:hover {
-    color: var(--purple);
+    color: var(--blue);
 }
 
 @media (max-width: 1024px) {
