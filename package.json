@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint:check": "next lint .",
+    "lint:fix": "next lint --fix ."
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"
