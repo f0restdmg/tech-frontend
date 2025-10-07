@@ -22,7 +22,7 @@ jobs:
           script: |
             cd ../apps/frontend
 
-            GIT_SSH_COMMAND="ssh -i ~/.ssh/github_actions -o StrictHostKeyChecking=no" git pull origin main
+            GIT_SSH_COMMAND="ssh -i ~/.ssh/github_actions -o StrictHostKeyChecking=no" git pull origin master
 
             # Возвращаемся на уровень выше для доступа к `docker-compose.yml`
             cd ..
