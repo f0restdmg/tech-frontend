@@ -1,12 +1,7 @@
 import type { NextConfig } from "next";
-import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  experimental: {
-    optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
-  },
+  /* config options here */
 };
 
-const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+export default nextConfig;

@@ -20,10 +20,6 @@
 # production
 /build
 
-# ide
-.vscode
-.idea
-
 # misc
 .DS_Store
 *.pem

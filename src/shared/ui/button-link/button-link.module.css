@@ -1,8 +1,0 @@
-.button-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-s);
-    transition: var(--primary-transition);
-    cursor: pointer;
-}
