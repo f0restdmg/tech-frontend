@@ -1,4 +1,7 @@
 /** @type {import("stylelint").Config} */
-export default {
-  "extends": ["stylelint-config-standard"]
+
+const config = {
+  extends: ["stylelint-config-standard"],
 };
+
+export default config;
