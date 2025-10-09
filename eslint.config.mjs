@@ -1,6 +1,8 @@
+import { FlatCompat } from "@eslint/eslintrc";
+
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -10,15 +12,45 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     ignores: [
-      "node_modules/**",
-      ".next/**",
+      "**/node_modules/**",
+      "**/.next/**",
       "out/**",
       "build/**",
+      "dist/**",
+      "coverage/**",
       "next-env.d.ts",
     ],
+  },
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": [
+        "warn",
+        {
+          groups: [
+            ["^react", "^next"],
+            [
+              "^@src/",
+              "^@app/",
+              "^@pages/",
+              "^@widgets/",
+              "^@features/",
+              "^@entities/",
+              "^@shared/",
+              "^@",
+            ],
+            ["^\\.\\./", "^\\./", "^\\.{1,2}/.*\\u0000$"],
+            ["^.+\\.css$"],
+          ],
+        },
+      ],
+      "simple-import-sort/exports": "warn",
+    },
   },
 ];
 
