@@ -8,8 +8,10 @@
     "start": "next start",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
-    "lint:check": "next lint .",
-    "lint:fix": "next lint --fix .",
+    "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "stylelint:check": "stylelint \"**/*.css\"",
+    "stylelint:fix": "stylelint \"**/*.css\" --fix",
     "prepare": "husky"
   },
   "dependencies": {
@@ -30,6 +32,7 @@
     "lint-staged": "^15.5.2",
     "prettier": "^3.6.2",
     "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
     "typescript": "^5"
   }
 }
