@@ -1,0 +1,25 @@
+:root {
+    /* Шрифты */
+    --font-family-main: 'Inter', sans-serif;
+    --font-line-title: 120%;
+    --font-line: 130%;
+    --font-line-accent: 140%;
+    --font-line-half: 150%;
+    --font-size-xss: 12px;
+    --font-size-xs: 14px;
+    --font-size-s: 16px;
+    --font-size-m: 18px;
+    --font-size-l: 20px;
+
+    /* Цвета */
+    --primary: #161616;
+    --light-primary: #252525;
+    --grey: #616161;
+    --blue: #3074F6;
+    --white: #ECECEC;
+
+    /* Индексы */
+
+    /* Прочее */
+    --primary-transition: 0.3s ease;
+}
