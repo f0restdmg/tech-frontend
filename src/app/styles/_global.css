@@ -4,8 +4,9 @@ html {
 
 body {
     font-family: var(--font-family-main), sans-serif;
-    font-size: var(--font-size-s);
-    color: var(--primary);
+    font-size: var(--font-size-m);
+    color: var(--primary-color);
+    background-color: var(--bg-white-color);
     font-style: normal;
     font-weight: 400;
     line-height: var(--font-line);
@@ -23,12 +24,15 @@ main {
     flex: 1;
 }
 
+a {
+    color: var(--primary-color);
+}
+
 a:hover {
-    color: var(--blue);
+    color: var(--accent-color);
 }
 
 .container {
-    max-width: 1272px;
-    padding: 0 16px;
+    max-width: 1440px;
     margin: 0 auto;
 }

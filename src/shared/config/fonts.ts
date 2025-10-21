@@ -8,6 +8,11 @@ export const manrope = localFont({
       style: "normal",
     },
     {
+      path: "./assets/manrope-v20-latin-500.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
       path: "./assets/manrope-v20-latin-600.woff2",
       weight: "600",
       style: "normal",

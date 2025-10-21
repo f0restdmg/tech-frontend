@@ -33,15 +33,15 @@ const eslintConfig = [
         "warn",
         {
           groups: [
-            ["^react", "^next"],
+            ["^react", "^next", "^clsx"],
             [
-              "^@src/",
-              "^@app/",
-              "^@pages/",
-              "^@widgets/",
-              "^@features/",
-              "^@entities/",
-              "^@shared/",
+              "^@/src/",
+              "^@/app/",
+              "^@/pages/",
+              "^@/widgets/",
+              "^@/features/",
+              "^@/entities/",
+              "^@/shared/",
               "^@",
             ],
             ["^\\.\\./", "^\\./", "^\\.{1,2}/.*\\u0000$"],

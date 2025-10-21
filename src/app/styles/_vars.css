@@ -1,21 +1,17 @@
 :root {
     /* Шрифты */
     --font-line-title: 120%;
-    --font-line: 130%;
+    --font-line: 155%;
     --font-line-accent: 140%;
-    --font-line-half: 150%;
-    --font-size-xss: 12px;
-    --font-size-xs: 14px;
-    --font-size-s: 16px;
     --font-size-m: 18px;
-    --font-size-l: 20px;
 
     /* Цвета */
-    --primary: #161616;
-    --light-primary: #252525;
-    --grey: #616161;
-    --blue: #3074F6;
-    --white: #ECECEC;
+    --primary-color: #1A1A1A;
+    --accent-color: #4F46E5;
+    --text-secondary-color: #5B6475;
+    --border-color: #E6E8EE;
+    --bg-base-color: #F7F8FA;
+    --bg-white-color: #FFF;
 
     /* Индексы */
 
