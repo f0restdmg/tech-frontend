@@ -73,7 +73,6 @@
 
 .dropdown:hover .dropdown__overlay,
 .dropdown:focus-within .dropdown__overlay {
-    pointer-events: auto;
     opacity: 1;
     visibility: visible;
 }
