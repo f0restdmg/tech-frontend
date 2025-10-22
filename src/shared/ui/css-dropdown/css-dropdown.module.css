@@ -1,0 +1,108 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.dropdown__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: var(--primary-color);
+    padding: 20px 0;
+    min-width: 150px;
+    z-index: var(--index-dropdown-button);
+    position: relative;
+}
+
+.dropdown__icon {
+    width: 30px;
+    height: 30px;
+    color: var(--secondary-color);
+    transition: transform var(--primary-transition) ease;
+}
+
+.dropdown__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 2px;
+    min-width: 260px;
+    background: var(--bg-white-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--primary-box-shadow);
+    list-style: none;
+    padding: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all var(--primary-transition) ease;
+    z-index: var(--index-dropdown-menu);
+    pointer-events: none;
+}
+
+.dropdown__menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.dropdown__overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--primary-transition) ease;
+    z-index: var(--index-dropdown-overlay);
+    pointer-events: none;
+}
+
+.dropdown:hover .dropdown__icon,
+.dropdown:focus-within .dropdown__icon {
+    transform: translateY(0);
+}
+
+.dropdown:hover .dropdown__overlay,
+.dropdown:focus-within .dropdown__overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown__item {
+    border-radius: 6px;
+}
+
+.dropdown__item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown__link {
+    display: block;
+    padding: 18px 20px;
+    color: var(--secondary-color);
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background var(--primary-transition) ease;
+}
+
+.dropdown__link:hover {
+    background: var(--border-color);
+}
+
+.dropdown:hover .dropdown__menu,
+.dropdown:focus-within .dropdown__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
