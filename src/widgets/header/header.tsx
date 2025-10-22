@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import clsx from "clsx";
 
 import { CssDropdown } from "@/shared/ui/css-dropdown";
@@ -8,8 +11,25 @@ import { headerLinks } from "./constants";
 import styles from "./header.module.css";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
   return (
     <header className={clsx(styles.header, "container")}>
+      <button
+        type="button"
+        className={clsx(
+          styles.header__burger,
+          isOpen && styles["header__burger--open"],
+        )}
+        onClick={toggleMenu}
+        aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
       <nav className={styles.header__nav}>
         {headerLinks.map((group) => (
           <CssDropdown
