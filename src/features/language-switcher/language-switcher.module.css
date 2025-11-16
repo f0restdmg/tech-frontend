@@ -1,0 +1,20 @@
+.language-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.language-switcher__divider {
+    color: var(--primary-color);
+}
+
+.language-switcher__item {
+    color: var(--secondary-color);
+}
+
+.language-switcher__item:hover {
+    color: var(--accent-color);
+}
+

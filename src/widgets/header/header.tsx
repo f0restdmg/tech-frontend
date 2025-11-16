@@ -3,6 +3,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 
+import { LanguageSwitcher } from "@/features/language-switcher";
 import { CssDropdown } from "@/shared/ui/css-dropdown";
 import { Logo } from "@/shared/ui/logo";
 
@@ -40,6 +41,9 @@ export const Header = () => {
         ))}
       </nav>
       <Logo className={styles.header__logo} width={222} height={35} />
+      <div className={styles.header__actions}>
+        <LanguageSwitcher />
+      </div>
     </header>
   );
 };
