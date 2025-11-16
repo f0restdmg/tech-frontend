@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: var(--bg-white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+.card__name {
+    font-weight: 500;
+}
+
+.card__image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.card__img {
+    object-fit: contain;
+}
+
+@media (width <= 1024px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card__name {
+        font-weight: 400;
+    }
+
+    .card__image {
+        width: 60px;
+        height: 60px;
+    }
+}
