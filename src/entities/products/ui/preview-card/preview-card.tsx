@@ -15,7 +15,13 @@ export const PreviewCard = ({
     <a href={link} className={clsx(styles.card, className)}>
       {image && (
         <div className={styles.card__image}>
-          <Image className={styles.card__img} src={image} alt={name} fill />
+          <Image
+            className={styles.card__img}
+            src={image}
+            alt={name}
+            sizes="(max-width: 1024px) 60px, 100px"
+            fill
+          />
         </div>
       )}
       <div className={styles.card__name}>{name}</div>
