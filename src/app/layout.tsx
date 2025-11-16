@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import clsx from "clsx";
 
 import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={manrope.variable}>
+      <body className={clsx(manrope.variable, "container")}>
         <Header />
         <main className={"container"}>{children}</main>
         <Footer />

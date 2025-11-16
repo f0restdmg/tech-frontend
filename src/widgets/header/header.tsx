@@ -16,7 +16,7 @@ export const Header = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <header className={clsx(styles.header, "container")}>
+    <header className={styles.header}>
       <button
         type="button"
         className={clsx(
