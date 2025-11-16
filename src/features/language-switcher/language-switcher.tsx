@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 
-import { LanguageLabel } from "@/features/language-switcher/constants";
+import { LanguageLabel } from "./constants";
 
 import styles from "./language-switcher.module.css";
 

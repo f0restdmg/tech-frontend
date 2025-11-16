@@ -44,6 +44,11 @@ export const Header = () => {
       <div className={styles.header__actions}>
         <LanguageSwitcher />
       </div>
+      {isOpen && (
+        <div className={styles["header__mobile-content"]}>
+          <LanguageSwitcher />
+        </div>
+      )}
     </header>
   );
 };
