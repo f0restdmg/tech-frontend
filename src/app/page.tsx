@@ -19,6 +19,8 @@ export default function Home() {
         title="Популярные видеокарты"
         items={fallbackPopularVideoCards}
       />
+      <ProductList title="Новые процессоры" items={fallbackPopularProcessors} />
+      <ProductList title="Новые видеокарты" items={fallbackPopularVideoCards} />
     </main>
   );
 }
