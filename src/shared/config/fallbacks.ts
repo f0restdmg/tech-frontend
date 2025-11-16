@@ -54,3 +54,60 @@ export const fallbackPopularProcessors = [
     link: "/",
   },
 ];
+
+export const fallbackPopularVideoCards = [
+  {
+    id: "1",
+    name: "Radeon RX 580",
+    image: "/images/fallback/amd-gpu.png",
+    link: "/",
+  },
+  {
+    id: "2",
+    name: "Radeon RX 580",
+    image: "/images/fallback/amd-gpu.png",
+    link: "/",
+  },
+  {
+    id: "3",
+    name: "GeForce RXT 3060",
+    image: "/images/fallback/nvidea.png",
+    link: "/",
+  },
+  {
+    id: "4",
+    name: "NVIDIA Quadro T1000",
+    image: "/images/fallback/nvidea.png",
+    link: "/",
+  },
+  {
+    id: "5",
+    name: "Radeon RX 580",
+    image: "/images/fallback/amd-gpu.png",
+    link: "/",
+  },
+  {
+    id: "6",
+    name: "GeForce RXT 3060",
+    image: "/images/fallback/nvidea.png",
+    link: "/",
+  },
+  {
+    id: "7",
+    name: "NVIDIA Quadro T1000",
+    image: "/images/fallback/nvidea.png",
+    link: "/",
+  },
+  {
+    id: "8",
+    name: "Radeon RX 580",
+    image: "/images/fallback/amd-gpu.png",
+    link: "/",
+  },
+  {
+    id: "9",
+    name: "GeForce RXT 3060",
+    image: "/images/fallback/nvidea.png",
+    link: "/",
+  },
+];

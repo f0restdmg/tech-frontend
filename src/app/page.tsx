@@ -1,6 +1,9 @@
 import { Hero } from "@/widgets/hero";
 import { ProductList } from "@/entities/products";
-import { fallbackPopularProcessors } from "@/shared/config/fallbacks";
+import {
+  fallbackPopularProcessors,
+  fallbackPopularVideoCards,
+} from "@/shared/config/fallbacks";
 
 import styles from "./page.module.css";
 
@@ -11,6 +14,10 @@ export default function Home() {
       <ProductList
         title="Популярные процессоры"
         items={fallbackPopularProcessors}
+      />
+      <ProductList
+        title="Популярные видеокарты"
+        items={fallbackPopularVideoCards}
       />
     </main>
   );
