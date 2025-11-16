@@ -16,8 +16,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: var(--font-line);
-    font-weight: 700;
+    line-height: var(--font-line-title);
+    font-weight: 600;
 }
 
 main {

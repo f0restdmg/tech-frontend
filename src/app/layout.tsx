@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={clsx(manrope.variable, "container")}>
         <Header />
-        <main className={"container"}>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
